@@ -226,7 +226,7 @@ body {
     }
 
     .hero__title {
-        font-size: 3.5rem;
+        font-size: 3.0rem;
     }
 }
 /* --- ABOUT SECTION --- */
@@ -887,3 +887,273 @@ body {
     visibility: visible;
 }
 
+/* --- LEGAL PAGES STYLES --- */
+.pages {
+    padding: 120px 0 80px;
+    background: var(--clr-bg);
+}
+
+.pages__wrapper {
+    background: #fff;
+    border: var(--border-thick);
+    padding: 60px;
+    box-shadow: 20px 20px 0px #000;
+}
+
+.pages h1 {
+    font-family: 'Space Grotesk', sans-serif;
+    font-size: clamp(1.4rem, 5vw, 4rem);
+    line-height: 1;
+    margin-bottom: 40px;
+    text-transform: uppercase;
+}
+
+.pages h2 {
+    font-family: 'Space Grotesk', sans-serif;
+    background: var(--clr-accent);
+    display: inline-block;
+    padding: 5px 15px;
+    border: 2px solid #000;
+    margin: 40px 0 20px;
+    font-size: 1.5rem;
+}
+
+.pages__content p {
+    font-size: 1.1rem;
+    margin-bottom: 20px;
+    font-weight: 500;
+    line-height: 1.6;
+}
+
+.brutal-list {
+    margin: 30px 0;
+}
+
+.brutal-list li {
+    padding: 15px;
+    border-left: 5px solid var(--clr-second);
+    background: #f9f9f9;
+    margin-bottom: 10px;
+    font-size: 0.95rem;
+    font-weight: 600;
+}
+
+.legal-link {
+    color: var(--clr-second);
+    font-weight: 800;
+    text-decoration: underline;
+    font-size: 1.2rem;
+}
+
+.pages__footer {
+    margin-top: 60px;
+    padding-top: 40px;
+    border-top: var(--border-thick);
+}
+
+/* Адаптив для мобилок */
+@media (max-width: 768px) {
+    .pages__wrapper {
+        padding: 30px 20px;
+        box-shadow: 10px 10px 0px #000;
+    }
+}
+/* --- DISCLAIMER SPECIFIC --- */
+.legal-notice {
+    border: 2px dashed #000;
+    padding: 20px;
+    margin-bottom: 30px;
+    background: #fdfdfd;
+}
+
+.brutal-block {
+    border: var(--border-thick);
+    padding: 25px;
+    margin-bottom: 25px;
+    position: relative;
+    background: #fff;
+    transition: 0.2s;
+}
+
+.brutal-block h3 {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 1rem;
+    margin-bottom: 15px;
+    color: var(--clr-second);
+    text-decoration: underline;
+}
+
+.brutal-block--warning {
+    background: var(--clr-accent);
+    /* Тот самый ядовитый цвет для важных рисков */
+    box-shadow: var(--shadow-small);
+}
+
+.brutal-block:hover {
+    transform: translate(-4px, -4px);
+    box-shadow: 10px 10px 0px #000;
+}
+
+.confirmation-box {
+    background: #000;
+    color: #fff;
+    padding: 20px;
+    margin-top: 40px;
+    font-size: 0.9rem;
+}
+
+.confirmation-box strong {
+    color: var(--clr-accent);
+}
+/* Стили для блоков политики */
+.brutal-block--accent {
+    background: var(--clr-accent);
+    color: #000;
+    box-shadow: var(--shadow-hard);
+}
+
+.brutal-block h2 {
+    font-family: 'Space Grotesk', sans-serif;
+    font-size: 1.3rem;
+    font-weight: 800;
+    margin-bottom: 20px;
+    text-transform: uppercase;
+    border-bottom: 2px solid currentColor;
+    padding-bottom: 10px;
+    display: inline-block;
+}
+
+.brutal-list li {
+    position: relative;
+    padding-left: 25px;
+    margin-bottom: 10px;
+    font-weight: 600;
+    list-style: none;
+}
+
+.brutal-list li::before {
+    content: '>';
+    position: absolute;
+    left: 0;
+    color: var(--clr-second);
+    font-weight: 900;
+}
+
+/* Эффект при наведении на блоки с данными */
+.brutal-block:hover {
+    transform: translate(-5px, -5px);
+    box-shadow: 12px 12px 0px #000;
+}
+/* Дополнительный акцент для правил использования */
+.brutal-block--accent {
+    background: var(--clr-accent);
+    box-shadow: 10px 10px 0px #000;
+}
+
+.brutal-list {
+    margin: 20px 0;
+    list-style: none;
+}
+
+.brutal-list li {
+    padding: 10px 0 10px 30px;
+    position: relative;
+    font-weight: 700;
+}
+
+.brutal-list li::before {
+    content: 'X';
+    position: absolute;
+    left: 0;
+    color: var(--clr-second);
+    font-weight: 900;
+}
+/* --- FOOTER MOBILE ADAPTIVE --- */
+
+@media (max-width: 768px) {
+    .footer {
+        padding: 40px 0 20px;
+        text-align: left;
+        /* Оставляем левое выравнивание для брутальности */
+    }
+
+    .footer__grid {
+        display: flex;
+        flex-direction: column;
+        gap: 0;
+        /* Убираем стандартный гэп, будем делить линиями */
+    }
+
+    .footer__col {
+        padding: 30px 0;
+        border-bottom: 2px solid #000;
+        /* Разделительная линия между блоками */
+    }
+
+    .footer__col:last-child {
+        border-bottom: none;
+    }
+
+    .footer__col--brand {
+        padding-top: 0;
+    }
+
+    /* Делаем заголовки более заметными */
+    .footer__label,
+    .footer__title {
+        font-size: 1.2rem;
+        display: inline-block;
+        background: var(--clr-accent);
+        padding: 2px 10px;
+        border: 2px solid #000;
+        margin-bottom: 20px;
+        transform: rotate(-1deg);
+        /* Небольшой наклон для стиля */
+    }
+
+    .footer__list {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        /* Ссылки в две колонки для экономии места */
+        gap: 15px;
+    }
+
+    .footer__list--contact {
+        display: flex;
+        flex-direction: column;
+        /* Контакты лучше в ряд (один под другим) */
+        grid-template-columns: none;
+    }
+
+    .footer__list--contact li {
+        display: flex;
+        align-items: flex-start;
+        gap: 12px;
+        margin-bottom: 15px;
+    }
+
+    .footer__list--contact i {
+        flex-shrink: 0;
+        width: 20px;
+        color: var(--clr-second);
+    }
+
+    .footer__text {
+        font-size: 0.95rem;
+        line-height: 1.5;
+        max-width: 100%;
+    }
+
+    .footer__bottom {
+        margin-top: 20px;
+        padding-top: 20px;
+        text-align: center;
+        font-size: 0.8rem;
+        background: #000;
+        color: #fff;
+        margin-left: -20px;
+        /* Растягиваем на всю ширину экрана */
+        margin-right: -20px;
+        padding: 15px 20px;
+    }
+}
